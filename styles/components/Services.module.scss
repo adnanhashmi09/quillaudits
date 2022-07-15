@@ -1,0 +1,97 @@
+@use '../utils/variables' as *;
+@use '../utils/include-media' as *;
+@use '../utils/mixins' as *;
+
+.section {
+  max-width: 144rem;
+  margin: 0 auto;
+
+  @include media('>=mindesk') {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  & .row {
+    margin: 0 0 6rem 0;
+    @include media('>=mindesk') {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 0 0 8rem 0;
+    }
+    & .image {
+      display: none;
+
+      @include media('>=mindesk') {
+        display: block;
+        width: min(30vw, 60rem);
+      }
+    }
+
+    & .text {
+      & p {
+        font-size: 1.7rem;
+        color: #391400;
+        font-weight: 400;
+        text-align: center;
+        width: 90%;
+        margin: 1rem auto;
+        line-height: 1.8;
+
+        @include media('>=tablet') {
+          width: 50ch;
+        }
+
+        @include media('>=mindesk') {
+          text-align: left;
+          margin: 1rem 0;
+          width: 40ch;
+        }
+      }
+
+      & ul {
+        margin: 2rem auto;
+        width: max-content;
+
+        @include media('>=mindesk') {
+          margin: 2rem 0;
+        }
+      }
+
+      & li {
+        display: flex;
+        align-items: center;
+
+        & p {
+          text-align: left;
+          margin: 0.5rem 0 0.5rem 2rem;
+          display: inline-block;
+          width: unset;
+        }
+      }
+
+      & .btnContainer {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        @include media('>=mindesk') {
+          justify-content: flex-start;
+        }
+      }
+
+      & figure {
+        width: 1.3rem;
+        display: inline-block;
+
+        & img {
+          width: 100%;
+          height: auto;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

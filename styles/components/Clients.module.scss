@@ -1,0 +1,48 @@
+@use '../utils/variables' as *;
+@use '../utils/include-media' as *;
+@use '../utils/mixins' as *;
+
+.section {
+  max-width: 144rem;
+  margin: 0 auto;
+
+  @include media('>mindesk') {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  & .imgContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    width: 80%;
+    margin: 4rem auto;
+    row-gap: 2rem;
+
+    & img {
+      width: 10rem;
+      height: auto;
+      object-fit: contain;
+
+      @include media('>mindesk') {
+        width: 13rem;
+      }
+    }
+
+    @include media('>=tablet') {
+      grid-template-columns: 1fr 1fr 1fr;
+      row-gap: 3rem;
+    }
+
+    @include media('>mindesk') {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin: 6rem 0;
+      width: 100%;
+    }
+  }
+}

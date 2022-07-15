@@ -1,0 +1,33 @@
+@use '../utils/variables' as *;
+@use '../utils/include-media' as *;
+@use '../utils/mixins' as *;
+
+.navbar {
+  padding: 2rem 2.5rem;
+  font-size: 1.8rem;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+
+  & .logo {
+    @include media('>tablet') {
+      font-size: 2.1rem;
+    }
+
+    @include media('>mindesk') {
+      font-size: 2.5rem;
+    }
+  }
+
+  & .navbarContainer {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 144rem;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,29 @@
+@use '../utils/variables' as *;
+@use '../utils/include-media' as *;
+@use '../utils/mixins' as *;
+
+.heading {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #2d83ee;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
+  @include media('>mindesk') {
+    text-align: left;
+  }
+}
+
+.subHeading {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #391400;
+  font-weight: 500;
+  margin: 2rem auto;
+
+  @include media('>mindesk') {
+    text-align: left;
+    font-size: $fnt-semi-large;
+  }
+}
