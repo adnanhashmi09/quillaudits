@@ -11,6 +11,7 @@ import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Testimonials from '../components/Testimonials';
 import FAQ from '../components/FAQ';
+import Blogs from '../components/Blogs';
 
 // Globals declarations
 const metaData = {
@@ -29,6 +30,7 @@ const Home: NextPage = () => {
       <Portfolio />
       <Testimonials />
       <FAQ />
+      <Blogs />
     </>
   );
 };

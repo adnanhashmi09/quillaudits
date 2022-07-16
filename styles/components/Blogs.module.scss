@@ -1,0 +1,121 @@
+@use '../utils/variables' as *;
+@use '../utils/include-media' as *;
+@use '../utils/mixins' as *;
+
+.section {
+  max-width: 144rem;
+  margin: 0 auto;
+
+  @include media('>=mindesk') {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  .BlogsContainer {
+    width: 85%;
+    display: flex;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: auto;
+    overflow-y: hidden;
+    margin: 0 auto;
+
+    @include media('>=mindesk') {
+      width: 100%;
+      margin: 4rem 0 0 0;
+      white-space: normal;
+      overflow: hidden;
+    }
+
+    & .blogItem {
+      display: inline-block;
+      margin: 1rem 2rem;
+      width: 25rem;
+      white-space: normal !important;
+
+      @include media('>=mindesk') {
+        margin: 0;
+        width: clamp(28rem, 25vw, 40rem);
+      }
+
+      & figure {
+        width: 100%;
+        overflow: hidden;
+
+        & img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+
+      & .text {
+        width: 100%;
+        display: flex;
+        flex-flow: column nowrap;
+        color: #391400;
+
+        & h3 {
+          font-size: 1.6rem;
+          text-align: center;
+          width: 25ch;
+          color: #2d83ee;
+          font-weight: 500;
+          line-height: 1.5;
+          margin-top: 1rem;
+          @include media('>=mindesk') {
+            text-align: left;
+            font-size: 2rem;
+          }
+        }
+
+        & p.date {
+          font-size: 1.2rem;
+          font-weight: 400;
+          margin: 1rem 0;
+          text-align: center;
+          @include media('>=mindesk') {
+            text-align: left;
+            font-size: 1.5rem;
+          }
+        }
+
+        & p.content {
+          font-size: 1.5rem;
+          text-align: center;
+          font-weight: 400;
+          line-height: 1.5;
+
+          @include media('>=mindesk') {
+            text-align: left;
+            font-size: 1.8rem;
+            width: 35ch;
+          }
+        }
+
+        & a {
+          color: #5a7ff7;
+          font-size: 1.2rem;
+          font-weight: 400;
+          margin: 1rem 0;
+          text-align: center;
+          @include media('>=mindesk') {
+            text-align: left;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  & .btnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 0 2rem 0;
+
+    @include media('>=mindesk') {
+      display: none;
+    }
+  }
+}
