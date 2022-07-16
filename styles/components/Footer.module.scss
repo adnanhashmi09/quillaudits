@@ -176,6 +176,10 @@
       & img {
         width: 2.8rem;
         cursor: pointer;
+
+        @include media('>=mindesk') {
+          width: 3.6rem;
+        }
       }
     }
 
