@@ -8,6 +8,8 @@ import Clients from '../components/Clients';
 // styles
 import styles from '../styles/components/Home.module.scss';
 import Services from '../components/Services';
+import Portfolio from '../components/Portfolio';
+import Testimonials from '../components/Testimonials';
 
 // Globals declarations
 const metaData = {
@@ -23,6 +25,8 @@ const Home: NextPage = () => {
       <HeroSection />
       <Clients />
       <Services />
+      <Portfolio />
+      <Testimonials />
     </>
   );
 };

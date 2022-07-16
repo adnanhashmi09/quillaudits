@@ -1,0 +1,101 @@
+@use '../utils/variables' as *;
+@use '../utils/include-media' as *;
+@use '../utils/mixins' as *;
+
+.section {
+  max-width: 144rem;
+  margin: 0 auto;
+
+  @include media('>=mindesk') {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+
+  & .testimonialContainer {
+    max-height: 21rem;
+    overflow: hidden;
+
+    @include media('>=tablet') {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    @include media('>=mindesk') {
+      max-height: unset;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 2rem;
+
+      margin-top: 3rem;
+    }
+
+    & > div {
+      font-size: 1.7rem;
+      color: #391400;
+      font-weight: 400;
+      text-align: left;
+      width: 90%;
+      margin: 1rem auto;
+      line-height: 1.8;
+
+      @include media('>phone') {
+        width: 36ch;
+      }
+
+      @include media('>=mindesk') {
+        width: unset;
+        max-width: 36ch;
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  & .user {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: left;
+    margin-top: 2rem;
+
+    & figure {
+      height: 5rem;
+      width: 5rem;
+      overflow: hidden;
+      border-radius: 50%;
+
+      & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    & .text {
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: flex-start;
+      margin-left: 2rem;
+
+      & h3 {
+        font-size: 1.6rem;
+      }
+
+      & p {
+        font-size: 1.6rem;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+
+  & .btnContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+
+    @include media('>=mindesk') {
+      display: none;
+    }
+  }
+}

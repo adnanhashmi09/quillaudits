@@ -1,0 +1,58 @@
+@use '../utils/variables' as *;
+@use '../utils/include-media' as *;
+@use '../utils/mixins' as *;
+
+.slider {
+  margin-top: 4rem;
+  @include media('>mindesk') {
+    margin-top: 6rem;
+  }
+}
+
+.nextArrow,
+.prevArrow {
+  font-size: 3rem !important;
+  position: absolute !important;
+  top: 30% !important;
+  transform: translateY(-50%) !important;
+  height: 3.5rem !important;
+  width: 3.5rem !important;
+
+  @include media('>mindesk') {
+    top: 30% !important;
+    transform: translateY(-50%) !important;
+    height: 4.75rem !important;
+    width: 4.75rem !important;
+    font-size: 7rem !important;
+  }
+
+  &::before {
+    content: '' !important;
+    height: 0 !important;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.nextArrow {
+  right: 2rem !important;
+  //   transform: translateX(25%) translateY(0) !important;
+
+  @include media('>=mindesk') {
+    right: -1rem !important;
+  }
+}
+
+.prevArrow {
+  left: 2rem !important;
+  //   right: 50% !important;
+  //   transform: translateX(-25%) translateY(0) !important;
+
+  //   top: unset !important;
+  //   bottom: -7rem !important;
+  @include media('>=mindesk') {
+    left: -1rem !important;
+  }
+}
