@@ -10,7 +10,7 @@
   text-transform: uppercase;
   letter-spacing: 2px;
 
-  @include media('>mindesk') {
+  @include media('>=mindesk') {
     text-align: left;
   }
 
@@ -48,7 +48,7 @@
     text-align: center;
   }
 
-  @include media('>mindesk') {
+  @include media('>=mindesk') {
     text-align: left;
     font-size: $fnt-semi-large;
   }

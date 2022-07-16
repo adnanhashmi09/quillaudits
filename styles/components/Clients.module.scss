@@ -6,7 +6,7 @@
   max-width: 144rem;
   margin: 0 auto;
 
-  @include media('>mindesk') {
+  @include media('>=mindesk') {
     padding-left: 4rem;
     padding-right: 4rem;
   }
@@ -26,7 +26,7 @@
       height: auto;
       object-fit: contain;
 
-      @include media('>mindesk') {
+      @include media('>=mindesk') {
         width: 13rem;
       }
     }
@@ -36,7 +36,7 @@
       row-gap: 3rem;
     }
 
-    @include media('>mindesk') {
+    @include media('>=mindesk') {
       display: flex;
       flex-flow: row wrap;
       justify-content: space-between;

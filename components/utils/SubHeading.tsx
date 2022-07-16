@@ -1,8 +1,10 @@
 import styles from '../../styles/components/SectionHeading.module.scss';
 
-function SubHeading({ children, modifier = '' }: any) {
+function SubHeading({ children, modifier = '', style = {} }: any) {
   return (
-    <h3 className={`${styles.subHeading} ${styles[modifier]}`}>{children}</h3>
+    <h3 style={style} className={`${styles.subHeading} ${styles[modifier]}`}>
+      {children}
+    </h3>
   );
 }
 
