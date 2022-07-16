@@ -258,7 +258,7 @@
 
       @include media('>=tablet') {
         text-align: left;
-        width: 35ch;
+        max-width: 35ch;
         margin: 2rem 0;
       }
 

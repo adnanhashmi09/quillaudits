@@ -41,7 +41,7 @@
     background-color: #132d6b;
     border: 1px solid #6081f9;
 
-    @include media('>mindesk') {
+    @include media('>=mindesk') {
       margin-left: 4rem;
     }
 
@@ -53,13 +53,13 @@
   &.secondary {
     width: 18rem;
 
-    @include media('>mindesk') {
+    @include media('>=mindesk') {
       padding: 1.3rem 0;
       font-size: 1.5rem;
     }
   }
 
-  @include media('>mindesk') {
+  @include media('>=mindesk') {
     padding: 1.8rem 0;
     font-size: 1.5rem;
   }
