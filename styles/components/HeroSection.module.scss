@@ -86,6 +86,7 @@
     & .blocksContainer {
       margin: 5rem auto;
       width: 25rem;
+      min-height: 25rem;
 
       @include media('>tablet') {
         width: 35rem;

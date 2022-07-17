@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { useEffect, useRef, useState } from 'react';
 
 // components
 import Meta from '../components/utils/Meta';
@@ -23,11 +24,27 @@ const metaData = {
 };
 
 const Home: NextPage = () => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const clientRef = useRef<any>();
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      const entry = entries[0];
+      if (!entry.isIntersecting) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    });
+
+    observer.observe(clientRef.current);
+  }, []);
   return (
     <>
       <Meta {...metaData} />
-      <Navbar />
-      <HeroSection />
+      <Navbar isVisible={isVisible} />
+      <div ref={clientRef}>
+        <HeroSection />
+      </div>
       <Clients />
       <Services />
       <Portfolio />

@@ -2,7 +2,7 @@ import SectionHeading from './utils/SectionHeading';
 import SubHeading from './utils/SubHeading';
 
 import styles from '../styles/components/Clients.module.scss';
-function Client() {
+const Client = () => {
   return (
     <section className={styles.section}>
       <SectionHeading>Client</SectionHeading>
@@ -17,6 +17,6 @@ function Client() {
       </div>
     </section>
   );
-}
+};
 
 export default Client;
