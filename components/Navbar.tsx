@@ -23,7 +23,7 @@ function Navbar({ isVisible }: { isVisible: boolean }) {
                 marginLeft: '1rem',
               }}
             />
-            <ul className={styles.dropdown}>
+            <ul className={styles.dropdown} style={{ display: 'none' }}>
               <Link href="#" passHref>
                 <li>
                   <a>Ethereum Audit</a>
@@ -66,7 +66,7 @@ function Navbar({ isVisible }: { isVisible: boolean }) {
                 marginLeft: '1rem',
               }}
             />
-            <ul className={styles.dropdown}>
+            <ul className={styles.dropdown} style={{ display: 'none' }}>
               <Link href="#" passHref>
                 <li>
                   <a>Ethereum Audit</a>
