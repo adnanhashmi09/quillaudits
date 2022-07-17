@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styles from '../styles/components/Footer.module.scss';
 import { HiOutlineMail } from 'react-icons/hi';
+import { useState } from 'react';
 
 function Footer() {
   return (
@@ -18,11 +19,11 @@ function Footer() {
             companies worldwide.
           </p>
           <div className={styles.dropdown}>
-            <select>
-              <option value="Option 1">ENG</option>
-              <option value="Option 2">2nd Option</option>
-              <option value="Option 3">Option Number 3</option>
-            </select>
+            <Dropdown />
+          </div>
+          <div className={styles.flagContainer}>
+            <img src="/chn.png" alt="china flag" loading="lazy" />
+            <img src="/jpn.png" alt="japan flag" loading="lazy" />
           </div>
         </div>
         <div className={styles.two}>
@@ -128,6 +129,60 @@ function Footer() {
         </div>
       </div>
     </footer>
+  );
+}
+
+function Dropdown() {
+  const [img, setImg] = useState<string>('/eng.png');
+  const [name, setName] = useState<string>('ENG');
+  const [alt, setAlt] = useState<string>('UK flag');
+  const [isActive, setIsActive] = useState<boolean>(false);
+
+  const handleClick = (e: any) => {
+    setAlt(e.currentTarget.getAttribute('data-alt'));
+    setImg(e.currentTarget.getAttribute('data-img'));
+    setName(e.currentTarget.getAttribute('data-name'));
+    setIsActive(false);
+  };
+  return (
+    <div
+      className={`${styles.dropdownContainer} ${isActive ? styles.active : ''}`}
+      onClick={() => setIsActive(!isActive)}
+    >
+      <div className={styles.selected}>
+        <img src={img} alt={alt} loading="lazy" />
+        <p>{name}</p>
+      </div>
+      <ul className={styles.option}>
+        <li
+          onClick={handleClick}
+          data-img="/eng.png"
+          data-name="ENG"
+          data-alt="UK flag"
+        >
+          <img src="/eng.png" alt="UK flag" loading="lazy" />
+          <p>ENG</p>
+        </li>
+        <li
+          onClick={handleClick}
+          data-img="/jpn.png"
+          data-name="JPN"
+          data-alt="Japan flag"
+        >
+          <img src="/jpn.png" alt="Japan flag" loading="lazy" />
+          <p>JPN</p>
+        </li>
+        <li
+          onClick={handleClick}
+          data-img="/chn.png"
+          data-name="CHN"
+          data-alt="China flag"
+        >
+          <img src="/chn.png" alt="China flag" loading="lazy" />
+          <p>CHN</p>
+        </li>
+      </ul>
+    </div>
   );
 }
 

@@ -141,13 +141,21 @@ function Services() {
             </li>
             <li>
               <figure>
-                <img src="/polygon.png" alt="ethereum_logo" loading="lazy" />
+                <img
+                  src="/Ethereum_logo.png"
+                  alt="ethereum_logo"
+                  loading="lazy"
+                />
               </figure>
               <p>NFT Due Diligence</p>
             </li>
             <li>
               <figure>
-                <img src="/binance.svg" alt="ethereum_logo" loading="lazy" />
+                <img
+                  src="/Ethereum_logo.png"
+                  alt="ethereum_logo"
+                  loading="lazy"
+                />
               </figure>
               <p>Rug Pull Due Diligence</p>
             </li>
