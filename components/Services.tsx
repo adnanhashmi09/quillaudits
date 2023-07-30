@@ -25,8 +25,8 @@ function Services() {
           <SectionHeading>Service</SectionHeading>
           <SubHeading>Smart Contract Auditing</SubHeading>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
+            Our Smart Contract Auditing service ensures that your blockchain-based applications are free from
+            vulnerabilities and potential security risks.
           </p>
 
           <ul>
@@ -85,8 +85,8 @@ function Services() {
           <SectionHeading>Service</SectionHeading>
           <SubHeading>Blockchain Penetration Testing</SubHeading>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
+            With our Blockchain Penetration Testing service, we proactively evaluate the strength
+            of your blockchain infrastructure.
           </p>
 
           <div className={styles.btnContainer}>
@@ -124,8 +124,8 @@ function Services() {
           <SectionHeading>Service</SectionHeading>
           <SubHeading>Due Diligence</SubHeading>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua
+            When it comes to blockchain technology, thorough Due Diligence is crucial. Our team provides
+            comprehensive assessments of projects, protocols, and investments to ensure transparency and mitigate risks.
           </p>
 
           <ul>

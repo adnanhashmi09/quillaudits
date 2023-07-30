@@ -9,33 +9,33 @@ import { IoCaretDownCircle } from 'react-icons/io5';
 const faqs = [
   {
     id: 0,
-    header: 'What is Lorem Ipsum?',
-    text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
+    header: 'What is a Smart Contract Audit?',
+    text: 'Smart Contract Audit is a comprehensive process to scrutinise a smart contract’s code that is used to interact with a cryptocurrency or blockchain. This process is carried out to discover errors, issues & security vulnerabilities in the code in order to rectify & fix them. It secures the code from potential future bugs.',
   },
   {
     id: 1,
-    header: 'What is Lorem Ipsum?',
-    text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
+    header: 'Who needs a Smart Contract Audit?',
+    text: 'Smart Contract Audit is for everyone who is dealing with smart contracts; whether you have an ICO, STO, fintech, Games or any Dapp solution based on Smart Contract, you should go for a third-party Audit',
   },
   {
     id: 2,
-    header: 'Where does it come from?',
-    text: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. `,
+    header: 'What is the time scale for an audit to complete?',
+    text: 'The time span of an audit depends on the code size & the complexity of the project. A standard token (ERC20 & other ERC standards) can be audited within a week; on the other hand, complex DeFi projects, Blockchain wallets/dApps may stretch around a couple of weeks to a month.'
   },
   {
     id: 3,
-    header: 'Why do we use it?',
-    text: `Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature,`,
+    header: 'How much does a smart contract audit cost?',
+    text: 'Our price varies from one smart contract to another. It depends on the complexity of functionalities and the lines of code in the smart-contract. We follow an intensive audit process by keeping the cost minimal to ensure maximum security. Request a free quote or contact our team, and we will get back to you with a feasible timeline and cost.'
   },
   {
     id: 4,
-    header: 'Where can I get some?',
-    text: `There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.`,
+    header: 'Which blockchains do we audit?',
+    text: 'We audit all major blockchains, which include Ethereum, Binance Smart Chain, Solana, Polygon(MATIC) , Polkadot, and many others.'
   },
   {
     id: 5,
-    header: 'Where does it come from?',
-    text: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. `,
+    header: 'What Audit process do we follow?',
+    text: 'We scan for vulnerabilities present in the system by running various test cases. We also conduct manual testing to verify the code for its intended use case. Apart from this, we also leverage in-house & open source security tools as per the smart contract’s framework.',
   },
 ];
 
@@ -100,9 +100,8 @@ const AccordionItem = (props: any) => {
     <div className={styles['rc-accordion-card']}>
       <div className={styles['rc-accordion-header']}>
         <div
-          className={`${styles['rc-accordion-toggle']} ${
-            active === id ? styles['active'] : ''
-          }`}
+          className={`${styles['rc-accordion-toggle']} ${active === id ? styles['active'] : ''
+            }`}
           onClick={() => handleToggle(id)}
         >
           <h5 className={styles['rc-accordion-title']}>{header}</h5>
@@ -114,9 +113,8 @@ const AccordionItem = (props: any) => {
       </div>
       <div
         ref={contentEl}
-        className={`${styles['rc-collapse']} ${
-          active === id ? styles['show'] : ''
-        }`}
+        className={`${styles['rc-collapse']} ${active === id ? styles['show'] : ''
+          }`}
         style={
           active === id
             ? { height: contentEl.current.scrollHeight }

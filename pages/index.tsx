@@ -7,7 +7,6 @@ import Navbar from '../components/Navbar';
 import HeroSection from '../components/HeroSection';
 import Clients from '../components/Clients';
 // styles
-import styles from '../styles/components/Home.module.scss';
 import Services from '../components/Services';
 import Portfolio from '../components/Portfolio';
 import Testimonials from '../components/Testimonials';

@@ -9,7 +9,7 @@ function Blogs() {
     <section className={styles.section}>
       <SectionHeading>Blogs</SectionHeading>
       <SubHeading modifier="withButton">
-        Lorem Ipsum
+        Catch Up On The Latest in Web3 Security
         <Button modifier="secondary" href="#" type="button">
           Read All
         </Button>

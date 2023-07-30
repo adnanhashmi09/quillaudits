@@ -17,16 +17,15 @@ function Poster() {
           />
         </figure>
         <div className={styles.text}>
-          <h2>Lorem ipsum dolor sit amet (Careers related)</h2>
+          <h2>Join Our Team </h2>
           <p>
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd
+            At Quillaudits, we believe in fostering a culture that thrives on innovation, collaboration, and continuous learning.
+            Join our team of passionate professionals who are dedicated to driving transformative change in the world of technology
+            and blockchain. As a rapidly growing company, we offer exciting opportunities for career advancement and personal growth.
           </p>
           <div className={styles.btnContainer}>
             <Link href="#" passHref>
-              <a className={styles.btn}>Button</a>
+              <a className={styles.btn}>Open Positions</a>
             </Link>
           </div>
         </div>

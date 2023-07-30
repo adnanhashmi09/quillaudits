@@ -10,12 +10,13 @@ function HeroSection() {
       <div className={styles.headerContainer}>
         <div className={styles.mainContainer}>
           <div className={styles.left}>
-            <h1>Lorem Ipsum dolor sit QuillAudits</h1>
+            <h1>Smart Contracts Auditing Services</h1>
             <p>
-              Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-              nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-              erat, sed diam voluptua. At vero eos et accusam et justo duo
-              dolores et ea rebum. Stet clita kasd gubergren, no sea
+              Welcome to our Smart Contract Auditing Service! At QuillAudits,
+              we offer a comprehensive and reliable solution to ensure the security and efficiency
+              of your blockchain-based projects. Our team of expert auditors specializes in meticulously
+              examining smart contracts, identifying vulnerabilities, and providing actionable insights
+              to fortify your decentralized applications.
             </p>
             <div className={styles.btnContainer}>
               <Button type="button" href="#" modifier="">
